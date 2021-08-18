@@ -1,4 +1,4 @@
-package eu.kinae.camel.testing.infinite.retry.fix;
+package eu.kinae.camel.testing.rabbit.retry.fix;
 
 import org.apache.camel.component.springrabbit.DefaultListenerContainerFactory;
 import org.apache.camel.component.springrabbit.SpringRabbitMQEndpoint;
@@ -16,6 +16,7 @@ public class FixDefaultListenerContainerFactory extends DefaultListenerContainer
     public AbstractMessageListenerContainer createListenerContainer(SpringRabbitMQEndpoint endpoint) {
         AbstractMessageListenerContainer listener = super.createListenerContainer(endpoint);
         listener.setAdviceChain(advices());
+        listener.setDefaultRequeueRejected(false);
         return listener;
     }
 

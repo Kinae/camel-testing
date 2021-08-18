@@ -1,4 +1,4 @@
-package eu.kinae.camel.testing.infinite.retry;
+package eu.kinae.camel.testing.rabbit.retry;
 
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
@@ -18,7 +18,7 @@ public class CamelRabbitTestRoute extends RouteBuilder {
         onException(Throwable.class)
                 .log(LoggingLevel.INFO, "InException CamelRabbitTestRoute");
 
-        from("timer://runOnce?repeatCount=1").autoStartup(autoStartup)
+        from("timer://CamelRabbitTestRoute?repeatCount=1").autoStartup(autoStartup)
                 .setBody(constant("Message to camel-rabbitmq"))
                 .to("rabbitmq://camel-rabbitmq?routingKey=camel-rabbitmq-rk&queue=camel-rabbitmq-queue&autoDelete=true");
 
