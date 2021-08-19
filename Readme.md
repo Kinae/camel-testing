@@ -16,3 +16,15 @@
 *3: Camel-Spring-RabbitMQ with a fix*
 
 `./mvnw spring-boot:run -Dspring-boot.run.arguments="--spring-rabbitmq=true --camel.component.spring-rabbitmq.listener-container-factory=#fixDefaultListenerContainerFactory"`
+
+*4: Camel-Slack*
+
+`./mvnw spring-boot:run -Dspring-boot.run.arguments="--slack=true"`
+
+*5: Camel-File*
+
+`./mvnw spring-boot:run -Dspring-boot.run.arguments="--file=true"`
+
+*6: Camel-File*
+
+`./mvnw spring-boot:run -Dspring-boot.run.arguments="--validate=true"`
