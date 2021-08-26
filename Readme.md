@@ -32,3 +32,7 @@
 *7: Camel-CSV*
 
 `./mvnw spring-boot:run -Dspring-boot.run.arguments="--csv=true"`
+
+*8: Camel-Stream*
+
+`./mvnw spring-boot:run -Dspring-boot.run.arguments="--file-stream=true"`
