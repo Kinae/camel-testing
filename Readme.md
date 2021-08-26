@@ -25,6 +25,10 @@
 
 `./mvnw spring-boot:run -Dspring-boot.run.arguments="--file=true"`
 
-*6: Camel-File*
+*6: Camel-Validate*
 
 `./mvnw spring-boot:run -Dspring-boot.run.arguments="--validate=true"`
+
+*7: Camel-CSV*
+
+`./mvnw spring-boot:run -Dspring-boot.run.arguments="--csv=true"`
