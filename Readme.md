@@ -36,3 +36,7 @@
 *8: Camel-Stream*
 
 `./mvnw spring-boot:run -Dspring-boot.run.arguments="--file-stream=true"`
+
+*9: Camel-RabbitMQ-Transfer*
+
+`./mvnw spring-boot:run -Dspring-boot.run.arguments="--rabbitmq-transfer=true"`
